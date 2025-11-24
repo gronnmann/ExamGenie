@@ -1,0 +1,25 @@
+[project]
+name = "examgenie"
+version = "0.1.0"
+description = "Analyze university exam PDFs and generate detailed study guides using AI"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "click>=8.1.7",
+    "pypdf>=4.0.0",
+    "pypandoc>=1.13",
+    "openai>=1.54.0",
+    "chromadb>=0.5.0",
+    "sentence-transformers>=3.0.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.9.0",
+    "rich>=13.7.0",
+    "tiktoken>=0.7.0",
+]
+
+[project.scripts]
+examgenie = "examgenie.main:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
